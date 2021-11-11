@@ -1,0 +1,25 @@
+/* SASS colour and font variables */
+
+$black: #000000;
+$white: #ffffff;
+$light-grey: #dfdfdf;
+
+$font-family: 'DM Sans', sans-serif;
+
+/* Responsive breakpoints */
+
+$tablet: 850px;
+$desktop: 1024px;
+
+h1 {
+  @include fonts(40px, 48px, 4.17, 700);
+}
+h2 {
+  @include fonts(24px, 25px, -0px, 700);
+}
+h3 {
+  @include fonts(18px, 25px, -0px, 700);
+}
+h4 {
+  @include fonts(12px, 16px, 2px, 700);
+}
