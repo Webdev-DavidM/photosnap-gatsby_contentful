@@ -1,0 +1,123 @@
+@import '../../App.scss';
+
+.footer {
+  padding: 4rem;
+  background-color: $black;
+  text-align: center;
+
+  @include tablet {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: 3rem 8rem;
+  }
+
+  &__logo {
+    @include tablet {
+      order: 0;
+    }
+
+    @include desktop {
+      width: 20%;
+    }
+  }
+
+  &__social_flex_container {
+    margin: 0.5rem;
+
+    @include tablet {
+      order: 3;
+      margin: 0.5rem 0rem;
+    }
+
+    @include desktop {
+      width: 80%;
+      display: flex;
+    }
+  }
+
+  &__social_icon {
+    margin: 0.5rem;
+    order: 2;
+
+    path {
+      fill: $white;
+      transition: fill 0.5s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        fill: url(#a);
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      order: 2;
+      width: 100%;
+    }
+
+    @include desktop {
+      order: 1;
+      width: 55%;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    padding: 0.5rem;
+    color: $white;
+    @include fonts(18px, 25px, -0px, 700);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $light-grey;
+    }
+  }
+
+  &__button {
+    @include arrow-button(auto, $white);
+    margin: 6rem auto 0.5rem;
+    position: relative;
+
+    @include tablet {
+      order: 1;
+      display: flex;
+      margin: 0.5rem 2rem 0.5rem auto;
+    }
+
+    @include desktop {
+      width: 20%;
+    }
+  }
+
+  &__button_text {
+    color: $white;
+    margin: auto;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 90%;
+  }
+
+  &__copyright {
+    margin: 1rem;
+    color: $light-grey;
+    @include fonts(14px, 22px, 0px, 400);
+
+    @include tablet {
+      order: 4;
+      margin-left: auto;
+    }
+  }
+}

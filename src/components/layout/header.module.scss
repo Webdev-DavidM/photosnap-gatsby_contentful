@@ -6,6 +6,10 @@
   overflow: hidden;
   height: 100px;
   transition: height 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 
   @include tablet {
     display: flex;

@@ -12,6 +12,8 @@ export default function Header() {
     ? styles.header
     : `${styles.header} ${styles.header__show}`;
 
+  // send up props to create a modal which will blank out the page //
+
   return (
     <div className={menu}>
       <div className={styles.header__logo_container}>
