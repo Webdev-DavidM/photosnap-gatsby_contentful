@@ -1,0 +1,87 @@
+@import '../../App.scss';
+
+.hero {
+  background-color: $black;
+  @include tablet {
+    display: flex;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+
+    @include tablet {
+      order: 1;
+      width: 40%;
+    }
+
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &__copy_section {
+    padding: 3rem;
+    background-color: $black;
+
+    @include tablet {
+      order: 0;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    @include desktop {
+      width: 40%;
+      padding: 5rem;
+    }
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__copy {
+    padding: 1rem 0;
+    color: $light-grey;
+  }
+
+  &__button {
+    @include arrow-button(auto, $white);
+    position: relative;
+
+    @include tablet {
+      order: 1;
+      display: flex;
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__button_text {
+    color: $white;
+    margin: auto;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 90%;
+  }
+
+  &__gradient {
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 197, 147),
+      rgb(188, 113, 152),
+      rgb(90, 119, 255)
+    );
+    height: 5px;
+    width: calc(50% - 3rem);
+    margin-left: 3rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

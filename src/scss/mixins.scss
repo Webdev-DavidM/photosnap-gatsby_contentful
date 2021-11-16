@@ -19,7 +19,6 @@
   text-align: center;
   display: flex;
   align-items: center;
-  // justify-content: space-evenly;
   transition: all 0.4s ease-in-out;
 
   svg {
@@ -29,6 +28,7 @@
 
   &:hover {
     text-decoration: underline;
+
     svg {
       margin-left: 2rem;
     }
@@ -45,7 +45,6 @@
   @include fonts(20px, 22px, 2px, 700);
   width: $width;
   color: $colour;
-  // margin: auto;
   cursor: pointer;
   background-color: $background-colour;
   padding: 0.5rem;
