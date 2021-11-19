@@ -6,9 +6,9 @@ import Footer from '../components/layout/footer';
 import Hero from '../components/layout/hero';
 import Article1 from '../components/layout/article1';
 import Article2 from '../components/layout/article2';
+import Benefits from '../components/layout/benefits';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const [grey, setGrey] = React.useState(false);
   const { heroCopy, heroImageDesktop, heroImageMobile, imageTablet, name } =
     data.hero.edges[0].node;
@@ -16,6 +16,8 @@ const IndexPage = ({ data }) => {
 
   const article1 = data.articles.edges[0];
   const article2 = data.articles.edges[1];
+
+  const benefits = data.benefits.edges.slice(0, 3);
 
   return (
     <main className='index'>
@@ -35,6 +37,7 @@ const IndexPage = ({ data }) => {
       )}
       <Article1 props={article1.node} />
       <Article2 props={article2.node} />
+      <Benefits benefits={benefits} />
       <Footer />
     </main>
   );
@@ -80,6 +83,19 @@ export const query = graphql`
           }
           heroImageMobile {
             gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
+          }
+        }
+      }
+    }
+    benefits: allContentfulFeatures {
+      edges {
+        node {
+          description
+          feature
+          featureIcon {
+            file {
+              url
+            }
           }
         }
       }

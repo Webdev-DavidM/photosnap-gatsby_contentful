@@ -1,0 +1,33 @@
+@import '../App.scss';
+
+.benefits {
+  text-align: center;
+  padding: 0 3rem 3rem 3rem;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 2rem;
+
+    @include desktop {
+      width: 33%;
+    }
+  }
+
+  &__icon {
+    padding: 2rem 0;
+  }
+
+  &__title {
+    padding: 1rem 0;
+  }
+
+  &__copy {
+    width: 78%;
+    margin: auto;
+  }
+}

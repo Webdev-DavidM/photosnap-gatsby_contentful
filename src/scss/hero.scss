@@ -10,6 +10,7 @@
   &__image {
     width: 100%;
     height: auto;
+    min-height: 400px;
 
     @include tablet {
       order: 1;
@@ -32,6 +33,11 @@
   &__copy-section {
     padding: 3rem;
     background-color: $black;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
     &--white {
       background-color: $white;
@@ -41,10 +47,6 @@
     @include tablet {
       order: 0;
       width: 60%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
     }
 
     @include desktop {
