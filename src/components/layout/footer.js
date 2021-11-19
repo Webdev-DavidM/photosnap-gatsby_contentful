@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './footer.module.scss';
+import '../../scss/footer.scss';
 import Logo from '../../assets/shared/mobile/logo-footer.svg';
 import { Link } from 'gatsby';
 import Facebook from '../../assets/shared/desktop/facebook.svg';
@@ -11,36 +11,34 @@ import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
 
 export default function footer() {
   return (
-    <div className={styles.footer}>
-      <Logo className={styles.footer__logo} />
-      <div className={styles.footer__social_flex_container}>
-        <Facebook className={styles.footer__social_icon} />
-        <Pinterest className={styles.footer__social_icon} />
-        <Twitter className={styles.footer__social_icon} />
-        <Youtube className={styles.footer__social_icon} />
-        <Instagram className={styles.footer__social_icon} />
+    <div className='footer'>
+      <Logo className='footer__logo' />
+      <div className='footer__social_flex_container'>
+        <Facebook className='footer__social_icon' />
+        <Pinterest className='footer__social_icon' />
+        <Twitter className='footer__social_icon' />
+        <Youtube className='footer__social_icon' />
+        <Instagram className='footer__social_icon' />
       </div>
-      <div className={styles.footer__links}>
-        <Link to='/home' className={styles.footer__link}>
+      <div className='footer__links'>
+        <Link to='/home' className='footer__link'>
           HOME
         </Link>
-        <Link to='/stories' className={styles.footer__link}>
+        <Link to='/stories' className='footer__link'>
           STORIES
         </Link>
-        <Link to='/features' className={styles.footer__link}>
+        <Link to='/features' className='footer__link'>
           FEATURES
         </Link>
-        <Link to='/pricing' className={styles.footer__link}>
+        <Link to='/pricing' className='footer__link'>
           PRICING
         </Link>
       </div>
-      <button className={styles.footer__button}>
-        <span className={styles.footer__button_text}>GET AN INVITE</span>
-        <Arrow className={styles.footer__arrow} />
+      <button className='footer__button'>
+        <span className='footer__button_text'>GET AN INVITE</span>
+        <Arrow className='footer__arrow' />
       </button>
-      <p className={styles.footer__copyright}>
-        Copyright 2019. All Rights Reserved
-      </p>
+      <p className='footer__copyright'>Copyright 2019. All Rights Reserved</p>
     </div>
   );
 }

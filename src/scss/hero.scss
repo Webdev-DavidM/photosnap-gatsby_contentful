@@ -1,7 +1,8 @@
-@import '../../App.scss';
+@import '../App.scss';
 
 .hero {
   background-color: $black;
+
   @include tablet {
     display: flex;
   }
@@ -18,11 +19,24 @@
     @include desktop {
       width: 60%;
     }
+
+    &--right {
+      order: 0;
+
+      @include tablet {
+        width: calc(60% + 5px);
+      }
+    }
   }
 
-  &__copy_section {
+  &__copy-section {
     padding: 3rem;
     background-color: $black;
+
+    &--white {
+      background-color: $white;
+      color: $black;
+    }
 
     @include tablet {
       order: 0;
@@ -41,6 +55,10 @@
 
   &__title {
     color: $white;
+
+    &--black {
+      color: $black;
+    }
   }
 
   &__copy {
@@ -81,7 +99,19 @@
     margin-left: 3rem;
 
     @include tablet {
-      display: none;
+      height: auto;
+      margin: 12rem 0;
+      width: 8px;
+      background-image: linear-gradient(
+        to bottom,
+        rgb(255, 197, 147),
+        rgb(188, 113, 152),
+        rgb(90, 119, 255)
+      );
+    }
+
+    @include desktop {
+      margin: 7rem 0;
     }
   }
 }

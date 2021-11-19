@@ -4,7 +4,7 @@ import Media from 'react-media';
 import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-export default function hero({ props }) {
+export default function article1({ props }) {
   const {
     imageTablet,
     heroImageDesktop,
@@ -17,8 +17,9 @@ export default function hero({ props }) {
   const tabletImage = getImage(imageTablet);
   const desktopImage = getImage(heroImageDesktop);
   const mobileImage = getImage(heroImageMobile);
+
   return (
-    <div className='hero '>
+    <div className='hero'>
       <Media
         queries={{
           mobile: '(max-width: 768px)',
@@ -28,14 +29,21 @@ export default function hero({ props }) {
         {(matches) => (
           <>
             {matches.mobile && (
-              <GatsbyImage className='hero__image' image={mobileImage} />
+              <GatsbyImage
+                className='hero__image hero__image--right'
+                image={mobileImage}
+              />
             )}
             {matches.tablet && (
-              <GatsbyImage className='hero__image' image={tabletImage} alt='' />
+              <GatsbyImage
+                className='hero__image hero__image--right'
+                image={tabletImage}
+                alt=''
+              />
             )}
             {matches.desktop && (
               <GatsbyImage
-                className='hero__image'
+                className='hero__image hero__image--right'
                 image={desktopImage}
                 alt=''
               />
@@ -43,9 +51,8 @@ export default function hero({ props }) {
           </>
         )}
       </Media>
-      <div className='hero__gradient'></div>
-      <div className='hero__copy-section'>
-        <h2 className='hero__title'>{name.toUpperCase()}</h2>
+      <div className='hero__copy-section hero__copy-section--white hero__copy-section--right'>
+        <h2 className='hero__title hero__title--black'>{name.toUpperCase()}</h2>
         <p className='hero__copy'>{heroCopy}</p>
         {showInviteButton && (
           <button className='hero__button'>

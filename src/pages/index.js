@@ -1,20 +1,25 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-/* Note below css.module file need to be named exports as below to work */
-import * as styles from './index.module.scss';
+import '../../src/scss/index.scss';
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
 import Hero from '../components/layout/hero';
+import Article1 from '../components/layout/article1';
+import Article2 from '../components/layout/article2';
 
 const IndexPage = ({ data }) => {
+  console.log(data);
   const [grey, setGrey] = React.useState(false);
   const { heroCopy, heroImageDesktop, heroImageMobile, imageTablet, name } =
-    data.allContentfulPageSection.edges[0].node;
+    data.hero.edges[0].node;
   const showInviteButton = true;
 
+  const article1 = data.articles.edges[0];
+  const article2 = data.articles.edges[1];
+
   return (
-    <main className={styles.index}>
-      {grey ? <div className={styles.index__greyed_out}></div> : null}
+    <main className='index'>
+      {grey ? <div className='index__greyed_out'></div> : null}
       <Header setGrey={setGrey} />
       {data && (
         <Hero
@@ -28,6 +33,8 @@ const IndexPage = ({ data }) => {
           }}
         />
       )}
+      <Article1 props={article1.node} />
+      <Article2 props={article2.node} />
       <Footer />
     </main>
   );
@@ -37,12 +44,28 @@ export default IndexPage;
 
 export const query = graphql`
   query MyQuery {
-    allContentfulPageSection(
-      filter: {
-        page: { eq: "home" }
-        sectionName: { eq: "hero" }
-        heroImageDesktop: {}
+    hero: allContentfulPageSection(
+      filter: { page: { eq: "home" }, sectionName: { eq: "hero" } }
+    ) {
+      edges {
+        node {
+          id
+          name
+          heroCopy
+          heroImageDesktop {
+            gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO])
+          }
+          imageTablet {
+            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
+          }
+          heroImageMobile {
+            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
+          }
+        }
       }
+    }
+    articles: allContentfulPageSection(
+      filter: { page: { eq: "home" }, sectionName: { eq: "article" } }
     ) {
       edges {
         node {
