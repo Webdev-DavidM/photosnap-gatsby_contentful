@@ -1,0 +1,96 @@
+@import '../App.scss';
+
+.stories {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__relative {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+
+    @include tablet {
+      height: 500px;
+    }
+  }
+
+  &__absolute {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: top 0.4s ease-in-out;
+
+    &:hover {
+      top: -20px;
+    }
+  }
+
+  &__hidden-gradient {
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 197, 147),
+      rgb(188, 113, 152),
+      rgb(90, 119, 255)
+    );
+    height: 20px;
+  }
+
+  &__item {
+    position: relative;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 25%;
+    }
+  }
+
+  &__info-section {
+    position: absolute;
+    margin: 3rem;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: calc(100% - 6rem);
+
+    @include tablet {
+      margin: 0 2rem 1rem;
+      width: calc(100% - 4rem);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 420px;
+  }
+
+  &__copy {
+    color: $white;
+    margin: 1rem 0 2rem;
+
+    &--no-bottom-margin {
+      margin: 1rem 0 1rem;
+    }
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__rule {
+    border-bottom: 1px solid white;
+  }
+
+  &__btn-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+}

@@ -3,3 +3,7 @@
 @import './scss/variables.scss';
 
 @import './scss/defaults.scss';
+
+body {
+  background-color: $background;
+}
