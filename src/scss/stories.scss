@@ -8,11 +8,11 @@
 
   &__relative {
     position: relative;
-    height: 420px;
+    height: 600px;
     overflow: hidden;
 
-    @include tablet {
-      height: 500px;
+    &--headline {
+      height: 950px;
     }
   }
 
@@ -26,6 +26,7 @@
 
     &:hover {
       top: -20px;
+      cursor: pointer;
     }
   }
 
@@ -49,6 +50,12 @@
     @include desktop {
       width: 25%;
     }
+
+    &--headline {
+      @include tablet {
+        width: 100%;
+      }
+    }
   }
 
   &__info-section {
@@ -63,11 +70,29 @@
       margin: 0 2rem 1rem;
       width: calc(100% - 4rem);
     }
+
+    &--headline {
+      @include tablet {
+        margin: 6rem;
+        width: 50%;
+        height: calc(100% - 12rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @include desktop {
+        width: 30%;
+      }
+    }
   }
 
   &__image {
     width: 100%;
-    min-height: 420px;
+    height: 600px;
+
+    &--headline {
+      height: 950px;
+    }
   }
 
   &__copy {
@@ -77,10 +102,23 @@
     &--no-bottom-margin {
       margin: 1rem 0 1rem;
     }
+
+    &--headline {
+      @include fonts(24px, 25px, -0px, 700);
+      margin: 2rem 0;
+    }
+
+    &--margin-right {
+      margin-right: 1rem;
+    }
   }
 
   &__title {
     color: $white;
+
+    &--headline {
+      @include fonts(50px, 50px, -0px, 700);
+    }
   }
 
   &__rule {
@@ -92,5 +130,9 @@
     justify-content: space-between;
     align-items: center;
     margin: 1rem 0;
+
+    &--headline {
+      justify-content: flex-start;
+    }
   }
 }

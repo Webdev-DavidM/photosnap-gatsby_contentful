@@ -5,7 +5,9 @@ import Media from 'react-media';
 import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
 
 export default function story({ story }) {
-  const { author, slug, title, imageDesktop, imageMobile } = story;
+  const { author, slug, title, date, imageDesktop, imageMobile } = story;
+
+  console.log(date);
 
   const desktopImage = getImage(imageDesktop);
   const mobileImage = getImage(imageMobile);
@@ -39,7 +41,7 @@ export default function story({ story }) {
             <p className='stories__copy'>by {author}</p>
             <div className='stories__rule'></div>
             <Link to={`/${slug}`}>
-              <div className='stories__btn-section'>
+              <div className='stories__btn-section stories__btn-section'>
                 <p className='stories__copy stories__copy--no-bottom-margin'>
                   READ MORE
                 </p>

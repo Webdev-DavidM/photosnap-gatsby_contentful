@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {
+      "UNLIMITED STORY POSTS": {
+        "Basic": true,
+        "Pro": true,
+        "Business": true
+      }
+    },
+    {
+      "UNLIMITED PHOTO UPLOADS": {
+        "Basic": true,
+        "Pro": true,
+        "Business": true
+      }
+    },
+    {
+      "CUSTOMIZE METDATA": {
+        "Basic": false,
+        "Pro": true,
+        "Business": true
+      }
+    },
+    {
+      "ADVANCED METRICS": {
+        "Basic": false,
+        "Pro": false,
+        "Business": true
+      }
+    },
+    {
+      "PHOTO DOWNLOADS": {
+        "Basic": false,
+        "Pro": false,
+        "Business": true
+      }
+    },
+    {
+      "SEARCH ENGINE INDEXING": {
+        "Basic": false,
+        "Pro": false,
+        "Business": true
+      }
+    },
+    {
+      "CUSTOM ANALYTICS": {
+        "Basic": false,
+        "Pro": false,
+        "Business": true
+      }
+    }
+  ]
+}

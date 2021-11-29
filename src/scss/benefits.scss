@@ -2,7 +2,7 @@
 
 .benefits {
   text-align: center;
-  padding: 0 3rem 3rem 3rem;
+  padding: 3rem;
   background-color: $white;
 
   @include desktop {
@@ -13,6 +13,7 @@
 
   &__item {
     padding: 2rem;
+    min-height: 400px;
 
     @include desktop {
       width: 33%;
@@ -21,10 +22,12 @@
 
   &__icon {
     padding: 2rem 0;
+    height: 150px;
   }
 
   &__title {
-    padding: 1rem 0;
+    padding: 2rem 0;
+    margin-top: auto;
   }
 
   &__copy {

@@ -45,7 +45,7 @@ export default function hero({ props }) {
       </Media>
       <div className='hero__gradient'></div>
       <div className='hero__copy-section'>
-        <h2 className='hero__title'>{name.toUpperCase()}</h2>
+        <h1 className='hero__title'>{name.toUpperCase()}</h1>
         <p className='hero__copy'>{heroCopy}</p>
         {showInviteButton && (
           <button className='hero__button'>

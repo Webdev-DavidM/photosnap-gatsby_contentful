@@ -76,7 +76,7 @@
   &__link {
     padding: 0.5rem;
     color: $white;
-    @include fonts(18px, 25px, -0px, 700);
+    @include fonts(26px, 25px, -0px, 700);
     transition: color 0.3s ease-in-out;
 
     &:hover {
@@ -103,6 +103,7 @@
   &__button_text {
     color: $white;
     margin: auto;
+    @include fonts(26px, 25px, -0px, 700);
   }
 
   &__arrow {

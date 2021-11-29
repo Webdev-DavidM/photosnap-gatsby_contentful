@@ -1,0 +1,98 @@
+@import '../App.scss';
+
+.features {
+  background-color: $black;
+
+  &__beta-section {
+    height: 300px;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__image-and-text-container {
+    position: relative;
+    width: calc(100% - 8px);
+  }
+
+  &__beta-background {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__gradient {
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 197, 147),
+      rgb(188, 113, 152),
+      rgb(90, 119, 255)
+    );
+    height: 5px;
+    width: calc(50% - 3rem);
+    margin-left: 3rem;
+
+    @include tablet {
+      height: auto;
+      margin: 0;
+      width: 8px;
+      background-image: linear-gradient(
+        to bottom,
+        rgb(255, 197, 147),
+        rgb(188, 113, 152),
+        rgb(90, 119, 255)
+      );
+    }
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 1000;
+    padding: 4rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include desktop {
+      padding: 8rem;
+    }
+  }
+
+  &__text-and-arrow {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    color: $white;
+
+    @include tablet {
+      @include fonts(50px, 48px, 4.17, 700);
+      width: 60%;
+    }
+  }
+
+  &__button {
+    @include arrow-button(auto, $white);
+    position: relative;
+    margin: 1rem 0;
+  }
+
+  &__button_text {
+    color: $white;
+    margin: auto;
+    @include fonts(26px, 25px, -0px, 700);
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 90%;
+  }
+}

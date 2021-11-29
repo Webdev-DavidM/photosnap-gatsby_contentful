@@ -19,7 +19,9 @@ export default function Header({ setGrey }) {
     <>
       <div className={menu}>
         <div className='header__logo_container'>
-          <Logo className='header__logo' />
+          <Link to='/' className='header__link'>
+            <Logo className='header__logo' />
+          </Link>
           {showMenu && (
             <button onClick={() => ToggleMenu(false)}>
               <CloseMenu className='header__cross' />
@@ -32,7 +34,7 @@ export default function Header({ setGrey }) {
           )}
         </div>
         <div className='header__links'>
-          <Link to='/stories' className='header__link'>
+          <Link to='/storypage' className='header__link'>
             STORIES
           </Link>
           <Link to='/features' className='header__link'>

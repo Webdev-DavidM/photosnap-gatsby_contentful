@@ -1,0 +1,40 @@
+@import '../App.scss';
+
+.storypage {
+  position: relative;
+  padding-top: 100px;
+
+  &__button {
+    @include arrow-button(auto, $white);
+    margin: 6rem auto 0.5rem;
+    position: relative;
+
+    @include tablet {
+      order: 1;
+      display: flex;
+      margin: 0.5rem 2rem 0.5rem auto;
+    }
+
+    @include desktop {
+      width: 20%;
+    }
+  }
+
+  &__button_text {
+    color: $white;
+    margin: auto;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 90%;
+  }
+
+  &__greyed_out {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}

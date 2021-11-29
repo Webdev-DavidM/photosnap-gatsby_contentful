@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include fonts(26px, 25px, -0px, 700);
 
     @include tablet {
       flex-direction: row;
@@ -52,6 +53,7 @@
 
   &__link {
     padding: 0.5rem;
+    @include fonts(26px, 25px, -0px, 700);
   }
 
   &__break {
@@ -66,6 +68,7 @@
 
   &__show {
     height: 50vh;
+    position: fixed;
   }
 
   &__button {

@@ -1,0 +1,262 @@
+@import '../App.scss';
+
+.pricing {
+  background-color: $white;
+  min-height: 800px;
+
+  &__plans-container {
+    @include large-desktop {
+      display: flex;
+      padding: 5rem;
+    }
+  }
+
+  &__gradient-and-plan-container {
+    margin: 2rem;
+    @include tablet {
+      display: flex;
+      margin: 2rem;
+    }
+  }
+
+  &__plan-card {
+    height: 550px;
+    text-align: center;
+    padding: 4rem;
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+
+    @include tablet {
+      height: 400px;
+    }
+
+    @include large-desktop {
+      height: 580px;
+    }
+
+    &--chosen {
+      background-color: $black;
+
+      @include tablet {
+        width: calc(100% - 10px);
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    @include large-desktop {
+      display: block;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__plan-name {
+    margin-bottom: 1rem;
+    transition: color 0.3s ease-in-out;
+
+    &--chosen {
+      color: $white;
+    }
+
+    @include tablet {
+      width: 50%;
+      order: 0;
+      text-align: left;
+    }
+
+    @include large-desktop {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+  }
+
+  &__plan-price {
+    transition: color 0.3s ease-in-out;
+    color: $black;
+
+    &--chosen {
+      color: $white;
+    }
+
+    @include tablet {
+      width: 50%;
+      order: 4;
+      text-align: right;
+      height: 100%;
+    }
+
+    @include large-desktop {
+      width: 100%;
+      height: auto;
+      order: 3;
+      text-align: center;
+    }
+  }
+
+  &__plan-copy {
+    color: $dark-grey;
+    margin: 1rem 0 3rem;
+
+    @include tablet {
+      width: 50%;
+      order: 1;
+      height: 30%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include large-desktop {
+      width: 100%;
+      min-height: 180px;
+      text-align: center;
+    }
+  }
+
+  &__plan-copy-per {
+    color: $dark-grey;
+    margin: 1rem 0 3rem;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include large-desktop {
+      display: block;
+    }
+  }
+
+  &__plan-button {
+    @include block-button(80%, $white, $black, $white, $dark-grey);
+    margin: auto;
+    padding: 2rem;
+
+    &--chosen {
+      @include block-button(80%, $black, $white, $white, $dark-grey);
+      padding: 2rem;
+    }
+
+    @include tablet {
+      width: 50%;
+      order: 3;
+    }
+
+    @include large-desktop {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+      margin-top: auto;
+    }
+  }
+
+  &__hidden-gradient {
+    background-image: linear-gradient(
+      to right,
+      rgb(255, 197, 147),
+      rgb(188, 113, 152),
+      rgb(90, 119, 255)
+    );
+    height: 10px;
+
+    @include tablet {
+      height: auto;
+      width: 10px;
+      margin: 0;
+      background-image: linear-gradient(
+        to bottom,
+        rgb(255, 197, 147),
+        rgb(188, 113, 152),
+        rgb(90, 119, 255)
+      );
+    }
+  }
+
+  &__monthly-annual-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4rem 2rem;
+  }
+
+  &__monthly-or-annual-button {
+    width: 10rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: $light-grey;
+    position: relative;
+  }
+
+  &__slider {
+    background-color: black;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+    transition: left 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+    &--annual {
+      left: 6.25rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $dark-grey;
+    }
+  }
+
+  &__tick-container {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem 0;
+  }
+
+  &__compare {
+    min-height: 300px;
+    margin: 6rem 2rem 2rem 2rem;
+  }
+
+  &__compare-heading {
+    margin-bottom: 3rem;
+  }
+
+  &__hr {
+    margin-bottom: 2rem;
+  }
+
+  &__cat-and-ticks-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  &__compare-plan-type {
+    color: $dark-grey;
+    @include fonts(26px, 25px, -0px, 700);
+
+    &:last-child {
+      margin-right: 10%;
+    }
+  }
+
+  &__compare-title {
+    width: 100%;
+    margin-bottom: 2rem;
+    @include fonts(26px, 25px, -0px, 700);
+  }
+}
