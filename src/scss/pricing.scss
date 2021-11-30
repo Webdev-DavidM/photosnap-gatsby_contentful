@@ -218,6 +218,10 @@
     }
   }
 
+  &__plan-title-grey {
+    color: $dark-grey;
+  }
+
   &__tick-container {
     width: 2rem;
     height: 2rem;
@@ -229,8 +233,22 @@
     margin: 6rem 2rem 2rem 2rem;
   }
 
-  &__compare-heading {
+  &__compare-heading-mobile {
     margin-bottom: 3rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__compare-heading-tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
   }
 
   &__hr {
@@ -258,5 +276,10 @@
     width: 100%;
     margin-bottom: 2rem;
     @include fonts(26px, 25px, -0px, 700);
+
+    @include tablet {
+      width: 40%;
+      margin-left: 10%;
+    }
   }
 }

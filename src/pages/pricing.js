@@ -20,8 +20,10 @@ const Pricing = ({ data }) => {
   const { heroCopy, heroImageDesktop, heroImageMobile, imageTablet, name } =
     data.hero.edges[0].node;
   const plans = data.plans.edges;
-  console.log(plans);
   const showInviteButton = true;
+
+  const monthlyPlan = !monthly ? 'pricing__plan-title-grey' : null;
+  const annualPlan = monthly ? 'pricing__plan-title-grey' : null;
 
   return (
     <main className='pricing'>
@@ -40,13 +42,13 @@ const Pricing = ({ data }) => {
         />
       )}
       <div className='pricing__monthly-annual-container'>
-        <h2>Monthly</h2>
+        <h2 className={monthlyPlan}>Monthly</h2>
         <div className='pricing__monthly-or-annual-button'>
           <div
             onClick={() => setMonthly((prevState) => !prevState)}
             className={annualOrMonthly}></div>
         </div>
-        <h2>Yearly</h2>
+        <h2 className={annualPlan}>Yearly</h2>
       </div>
       <div className='pricing__plans-container'>
         {plans.map((plan) => (

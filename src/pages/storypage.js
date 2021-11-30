@@ -9,14 +9,12 @@ import HeadlineStory from '../components/layout/headline-story';
 
 export default function StoryPage({ data }) {
   const [grey, setGrey] = React.useState(false);
-  console.log(data.stories.edges);
 
   let stories = data.stories.edges;
   let headlineStory = [];
   let mainStories = [];
 
   stories.forEach((story) => {
-    console.log(story.node.title);
     if (story.node.title !== ' Sunset Cityscapes') {
       mainStories.push(story);
     } else {
