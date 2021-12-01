@@ -29,12 +29,4 @@
     position: absolute;
     left: 90%;
   }
-
-  &__greyed_out {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
-  }
 }

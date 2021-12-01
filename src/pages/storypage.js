@@ -2,14 +2,11 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import '../../src/scss/story-page.scss';
 import '../../src/scss/index.scss';
-import Header from '../components/layout/header';
-import Footer from '../components/layout/footer';
 import Stories from '../components/layout/stories';
 import HeadlineStory from '../components/layout/headline-story';
+import Layout from '../components/layout.js';
 
 export default function StoryPage({ data }) {
-  const [grey, setGrey] = React.useState(false);
-
   let stories = data.stories.edges;
   let headlineStory = [];
   let mainStories = [];
@@ -23,13 +20,12 @@ export default function StoryPage({ data }) {
   });
 
   return (
-    <main className='storypage'>
-      {grey ? <div className='index__greyed_out'></div> : null}
-      <Header setGrey={setGrey} />
-      <HeadlineStory headlineStory={headlineStory} />
-      <Stories stories={mainStories} />
-      <Footer />
-    </main>
+    <Layout>
+      <main className='storypage'>
+        <HeadlineStory headlineStory={headlineStory} />
+        <Stories stories={mainStories} />
+      </main>
+    </Layout>
   );
 }
 export const query = graphql`

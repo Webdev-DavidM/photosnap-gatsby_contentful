@@ -1,12 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import '../../src/scss/pricing.scss';
-import Header from '../components/layout/header';
-import Footer from '../components/layout/footer';
 import Hero from '../components/layout/hero';
 import BetaSection from '../components/layout/features/beta-section';
 import Compare from '../components/pricing/compare';
 import Options from '../components/pricing/options';
+import Layout from '../components/layout.js';
 
 const Pricing = ({ data }) => {
   const [monthly, setMonthly] = React.useState(true);
@@ -16,7 +15,6 @@ const Pricing = ({ data }) => {
     ? 'pricing__slider'
     : 'pricing__slider pricing__slider--annual';
 
-  const [grey, setGrey] = React.useState(false);
   const { heroCopy, heroImageDesktop, heroImageMobile, imageTablet, name } =
     data.hero.edges[0].node;
   const plans = data.plans.edges;
@@ -26,45 +24,44 @@ const Pricing = ({ data }) => {
   const annualPlan = monthly ? 'pricing__plan-title-grey' : null;
 
   return (
-    <main className='pricing'>
-      {grey ? <div className='index__greyed_out'></div> : null}
-      <Header setGrey={setGrey} />
-      {data && (
-        <Hero
-          props={{
-            heroImageDesktop,
-            heroImageMobile,
-            imageTablet,
-            heroCopy,
-            name,
-            showInviteButton,
-          }}
-        />
-      )}
-      <div className='pricing__monthly-annual-container'>
-        <h2 className={monthlyPlan}>Monthly</h2>
-        <div className='pricing__monthly-or-annual-button'>
-          <div
-            onClick={() => setMonthly((prevState) => !prevState)}
-            className={annualOrMonthly}></div>
-        </div>
-        <h2 className={annualPlan}>Yearly</h2>
-      </div>
-      <div className='pricing__plans-container'>
-        {plans.map((plan) => (
-          <Options
-            plan={plan}
-            setChosenPlan={setChosenPlan}
-            monthly={monthly}
-            chosenPlan={chosenPlan}
+    <Layout>
+      <main className='pricing'>
+        {data && (
+          <Hero
+            props={{
+              heroImageDesktop,
+              heroImageMobile,
+              imageTablet,
+              heroCopy,
+              name,
+              showInviteButton,
+            }}
           />
-        ))}
-      </div>
+        )}
+        <div className='pricing__monthly-annual-container'>
+          <h2 className={monthlyPlan}>Monthly</h2>
+          <div className='pricing__monthly-or-annual-button'>
+            <div
+              onClick={() => setMonthly((prevState) => !prevState)}
+              className={annualOrMonthly}></div>
+          </div>
+          <h2 className={annualPlan}>Yearly</h2>
+        </div>
+        <div className='pricing__plans-container'>
+          {plans.map((plan) => (
+            <Options
+              plan={plan}
+              setChosenPlan={setChosenPlan}
+              monthly={monthly}
+              chosenPlan={chosenPlan}
+            />
+          ))}
+        </div>
 
-      <Compare plans={plans} />
-      <BetaSection />
-      <Footer />
-    </main>
+        <Compare plans={plans} />
+        <BetaSection />
+      </main>
+    </Layout>
   );
 };
 
