@@ -5,8 +5,8 @@ import Story from './story';
 export default function stories({ stories }) {
   return (
     <div className='stories'>
-      {stories.map((story) => (
-        <Story story={story.node} />
+      {stories.map((story, index) => (
+        <Story key={index} story={story.node} />
       ))}
     </div>
   );

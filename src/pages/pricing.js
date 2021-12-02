@@ -48,8 +48,9 @@ const Pricing = ({ data }) => {
           <h2 className={annualPlan}>Yearly</h2>
         </div>
         <div className='pricing__plans-container'>
-          {plans.map((plan) => (
+          {plans.map((plan, index) => (
             <Options
+              key={index}
               plan={plan}
               setChosenPlan={setChosenPlan}
               monthly={monthly}

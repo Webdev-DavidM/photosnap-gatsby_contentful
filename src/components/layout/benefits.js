@@ -4,9 +4,9 @@ import '../../scss/benefits.scss';
 export default function benefits({ benefits }) {
   return (
     <div className='benefits'>
-      {benefits.map((benefit) => {
+      {benefits.map((benefit, index) => {
         return (
-          <div className='benefits__item'>
+          <div key={index} className='benefits__item'>
             <div className='benefits__icon'>
               <img src={benefit.node.featureIcon.file.url} alt='' />
             </div>

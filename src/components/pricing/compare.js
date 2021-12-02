@@ -14,7 +14,7 @@ export default function compare() {
       <hr className='pricing__hr' />
       {catKeys.map((key, index) => {
         return (
-          <>
+          <div key={index}>
             <div className='pricing__cat-and-ticks-flex-container'>
               <h3 className='pricing__compare-title'>{catKeys[index]}</h3>
               <div className='pricing__compare-plan-type'>
@@ -32,7 +32,7 @@ export default function compare() {
                 </span>
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

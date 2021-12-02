@@ -20,21 +20,21 @@ export default function BetaSection() {
                 <img
                   className='features__beta-background'
                   src={'../../mobile/bg-beta.jpg'}
-                  alt='background image'
+                  alt='background'
                 />
               )}
               {matches.tablet && (
                 <img
                   className='features__beta-background'
                   src={'../../tablet/bg-beta.jpg'}
-                  alt='background image'
+                  alt='background'
                 />
               )}
               {matches.desktop && (
                 <img
                   className='features__beta-background'
                   src={'../../desktop/bg-beta.jpg'}
-                  alt='background image'
+                  alt='background'
                 />
               )}
             </>

@@ -18,7 +18,7 @@ export default function hero({ props }) {
   const desktopImage = getImage(heroImageDesktop);
   const mobileImage = getImage(heroImageMobile);
   return (
-    <div className='hero '>
+    <div className='hero'>
       <Media
         queries={{
           mobile: '(max-width: 768px)',
@@ -31,13 +31,17 @@ export default function hero({ props }) {
               <GatsbyImage className='hero__image' image={mobileImage} />
             )}
             {matches.tablet && (
-              <GatsbyImage className='hero__image' image={tabletImage} alt='' />
+              <GatsbyImage
+                className='hero__image'
+                image={tabletImage}
+                alt='background image'
+              />
             )}
             {matches.desktop && (
               <GatsbyImage
                 className='hero__image'
                 image={desktopImage}
-                alt=''
+                alt='background image'
               />
             )}
           </>

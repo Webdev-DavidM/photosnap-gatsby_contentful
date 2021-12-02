@@ -7,7 +7,6 @@ import BetaSection from '../components/layout/features/beta-section';
 import Layout from '../components/layout.js';
 
 export default function Features({ data }) {
-  const [grey, setGrey] = React.useState(false);
   const { heroCopy, heroImageDesktop, heroImageMobile, imageTablet, name } =
     data.hero.edges[0].node;
   const benefits = data.features.edges;

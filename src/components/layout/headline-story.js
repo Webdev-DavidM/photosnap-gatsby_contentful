@@ -50,15 +50,8 @@ export default function story({ headlineStory }) {
               {date} by {author}
             </p>
             <Link to={`/${slug}`}>
-              {/* <div className='stories__btn-section stories__btn-section--headline'>
-                <p className='stories__copy stories__copy--margin-right stories__copy--no-bottom-margin'>
-                  READ MORE
-                </p>
-
-                <Arrow />
-              </div> */}
               <button className='hero__button'>
-                <span className='hero__button_text'>GET AN INVITE</span>
+                <span className='hero__button_text'>READ MORE</span>
                 <Arrow className='hero__arrow' />
               </button>
             </Link>

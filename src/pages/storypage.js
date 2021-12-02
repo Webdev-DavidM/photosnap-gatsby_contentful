@@ -42,7 +42,6 @@ export const query = graphql`
           title
           slug
           author
-          date(formatString: "MMMM, Do YYYY")
         }
       }
     }

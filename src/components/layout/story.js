@@ -5,9 +5,7 @@ import Media from 'react-media';
 import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
 
 export default function story({ story }) {
-  const { author, slug, title, date, imageDesktop, imageMobile } = story;
-
-  console.log(date);
+  const { author, slug, title, imageDesktop, imageMobile } = story;
 
   const desktopImage = getImage(imageDesktop);
   const mobileImage = getImage(imageMobile);
