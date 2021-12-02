@@ -12,15 +12,36 @@
     height: auto;
     min-height: 550px;
 
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
+
     @include tablet {
       order: 1;
       width: 40%;
       min-height: 650px;
+
+      &--mobile {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
     }
 
     @include desktop {
       width: 60%;
       min-height: 800px;
+
+      &--tablet {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
     }
 
     &--right {
