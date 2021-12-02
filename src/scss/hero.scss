@@ -5,59 +5,39 @@
 
   @include tablet {
     display: flex;
+    height: 600px;
+  }
+
+  @include desktop {
+    height: 700px;
   }
 
   &__image {
     width: 100%;
-    height: auto;
-    min-height: 550px;
-
-    &--tablet,
-    &--desktop {
-      display: none;
-    }
+    height: 100%;
+    min-height: 500px;
 
     @include tablet {
+      width: calc(40% + 5px);
+      height: 100%;
       order: 1;
-      width: 40%;
-      min-height: 650px;
-
-      &--mobile {
-        display: none;
-      }
-
-      &--tablet {
-        display: block;
-      }
     }
 
     @include desktop {
       width: 60%;
-      min-height: 800px;
-
-      &--tablet {
-        display: none;
-      }
-
-      &--desktop {
-        display: block;
-      }
     }
+  }
 
-    &--right {
-      order: 0;
-
-      @include tablet {
-        width: calc(60% + 5px);
-      }
-    }
+  &--right {
+    order: 0;
   }
 
   &__copy-section {
     padding: 3rem;
     background-color: $black;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../scss/hero.scss';
 import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
+import Media from 'react-media';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export default function hero({ props }) {
@@ -18,21 +19,30 @@ export default function hero({ props }) {
   const mobileImage = getImage(heroImageMobile);
   return (
     <div className='hero'>
-      <GatsbyImage
-        className='hero__image hero__image--mobile'
-        image={mobileImage}
-        alt='background image'
-      />
-      <GatsbyImage
-        className='hero__image hero__image--tablet'
-        image={tabletImage}
-        alt='background image'
-      />
-      <GatsbyImage
-        className='hero__image hero__image--desktop'
-        image={desktopImage}
-        alt='background image'
-      />
+      <Media
+        queries={{
+          mobile: '(max-width: 768px)',
+          tablet: '(min-width: 769px) and (max-width: 1023px)',
+          desktop: '(min-width: 1024px)',
+        }}>
+        {(matches) => (
+          <>
+            {matches.mobile && (
+              <GatsbyImage className='hero__image' image={mobileImage} />
+            )}
+            {matches.tablet && (
+              <GatsbyImage className='hero__image' image={tabletImage} alt='' />
+            )}
+            {matches.desktop && (
+              <GatsbyImage
+                className='hero__image'
+                image={desktopImage}
+                alt=''
+              />
+            )}
+          </>
+        )}
+      </Media>
       <div className='hero__gradient'></div>
       <div className='hero__copy-section'>
         <h1 className='hero__title'>{name.toUpperCase()}</h1>
