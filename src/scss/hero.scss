@@ -26,10 +26,10 @@
     @include desktop {
       width: 60%;
     }
-  }
 
-  &--right {
-    order: 0;
+    &--right {
+      order: 0;
+    }
   }
 
   &__copy-section {
