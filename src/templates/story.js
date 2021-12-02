@@ -5,7 +5,6 @@ import { Link } from 'gatsby';
 import '../scss/full-page-story.scss';
 
 export default function story({ data }) {
-  console.log(data.allContentfulStories.edges[0].node);
   const { author, slug, title, imageMobile, storyline } =
     data.allContentfulStories.edges[0].node;
 

@@ -54,6 +54,11 @@
   &__link {
     padding: 0.5rem;
     @include fonts(26px, 25px, -0px, 700);
+    transition: color 0.4s ease-in-out;
+
+    &:hover {
+      color: $light-grey;
+    }
   }
 
   &__break {
