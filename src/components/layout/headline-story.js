@@ -16,7 +16,7 @@ export default function story({ headlineStory }) {
     <div className='stories__item stories__item--headline'>
       <div className='stories__relative stories__relative--headline'>
         <div className='stories__absolute'>
-          <Media
+          {/* <Media
             queries={{
               mobile: '(max-width: 768px)',
               tablet: '(min-width: 769px)',
@@ -38,7 +38,8 @@ export default function story({ headlineStory }) {
                 )}
               </>
             )}
-          </Media>
+          </Media> */}
+          <GatsbyImage className='stories__image' image={desktopImage} alt='' />
           <div className='stories__info-section  stories__info-section--headline'>
             <p className='stories__copy stories__copy--headline'>
               LAST MONTH'S FEATURED STORY

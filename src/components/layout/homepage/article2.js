@@ -20,7 +20,7 @@ export default function article1({ props }) {
 
   return (
     <div className='hero'>
-      <Media
+      {/* <Media
         queries={{
           mobile: '(max-width: 768px)',
           tablet: '(min-width: 769px) and (max-width: 1023px)',
@@ -43,7 +43,8 @@ export default function article1({ props }) {
             )}
           </>
         )}
-      </Media>
+      </Media> */}
+      <GatsbyImage className='hero__image' image={desktopImage} alt='' />
       <div className='hero__copy-section hero__copy-section--white'>
         <h1 className='hero__title hero__title--black'>{name.toUpperCase()}</h1>
         <p className='hero__copy'>{heroCopy}</p>

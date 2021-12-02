@@ -39,7 +39,7 @@ export default function hero({ props }) {
           </>
         )}
       </Media> */}
-      <GatsbyImage
+      {/* <GatsbyImage
         className='hero__image hero__image--mobile'
         image={desktopImage}
         alt=''
@@ -48,12 +48,8 @@ export default function hero({ props }) {
         className='hero__image hero__image--tablet'
         image={desktopImage}
         alt=''
-      />
-      <GatsbyImage
-        className='hero__image hero__image--desktop'
-        image={desktopImage}
-        alt=''
-      />
+      /> */}
+      <GatsbyImage className='hero__image' image={desktopImage} alt='' />
       <div className='hero__gradient'></div>
       <div className='hero__copy-section'>
         <h1 className='hero__title'>{name.toUpperCase()}</h1>

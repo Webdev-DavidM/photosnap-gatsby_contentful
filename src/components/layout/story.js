@@ -14,7 +14,7 @@ export default function story({ story }) {
     <div className='stories__item'>
       <div className='stories__relative'>
         <div className='stories__absolute'>
-          <Media
+          {/* <Media
             queries={{
               mobile: '(max-width: 768px)',
               tablet: '(min-width: 769px)',
@@ -33,7 +33,8 @@ export default function story({ story }) {
                 )}
               </>
             )}
-          </Media>
+          </Media> */}
+          <GatsbyImage className='stories__image' image={desktopImage} alt='' />
           <div className='stories__info-section'>
             <h2 className='stories__title'>{title}</h2>
             <p className='stories__copy'>by {author}</p>
