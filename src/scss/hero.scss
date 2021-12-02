@@ -17,14 +17,35 @@
     height: 100%;
     min-height: 500px;
 
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
+
     @include tablet {
       width: calc(40% + 5px);
       height: 100%;
       order: 1;
+
+      &--mobile {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
     }
 
     @include desktop {
       width: 60%;
+
+      &--tablet {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
     }
 
     &--right {
