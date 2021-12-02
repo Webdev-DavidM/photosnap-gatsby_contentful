@@ -19,7 +19,7 @@ export default function hero({ props }) {
   const mobileImage = getImage(heroImageMobile);
   return (
     <div className='hero'>
-      <Media
+      {/* <Media
         queries={{
           mobile: '(max-width: 768px)',
           tablet: '(min-width: 769px) and (max-width: 1023px)',
@@ -46,7 +46,12 @@ export default function hero({ props }) {
             )}
           </>
         )}
-      </Media>
+      </Media> */}
+      <GatsbyImage
+        className='hero__image'
+        image={desktopImage}
+        alt='background image'
+      />
       <div className='hero__gradient'></div>
       <div className='hero__copy-section'>
         <h1 className='hero__title'>{name.toUpperCase()}</h1>
