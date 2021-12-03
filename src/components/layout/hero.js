@@ -1,54 +1,14 @@
 import React from 'react';
 import '../../scss/hero.scss';
 import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
-import Media from 'react-media';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export default function hero({ props }) {
-  const {
-    imageTablet,
-    heroImageDesktop,
-    heroImageMobile,
-    showInviteButton,
-    name,
-    heroCopy,
-  } = props;
+  const { heroImageDesktop, showInviteButton, name, heroCopy } = props;
 
-  const tabletImage = getImage(imageTablet);
   const desktopImage = getImage(heroImageDesktop);
-  const mobileImage = getImage(heroImageMobile);
   return (
     <div className='hero'>
-      {/* <Media
-        queries={{
-          mobile: '(max-width: 768px)',
-          tablet: '(min-width: 769px) and (max-width: 1023px)',
-          desktop: '(min-width: 1024px)',
-        }}>
-        {(matches) => (
-          <>
-            {matches.mobile && (
-              <GatsbyImage className='hero__image' image={mobileImage} />
-            )}
-            {matches.tablet && (
-              <GatsbyImage className='hero__image' image={tabletImage} alt='' />
-            )}
-            {matches.desktop && (
-   
-            )}
-          </>
-        )}
-      </Media> */}
-      {/* <GatsbyImage
-        className='hero__image hero__image--mobile'
-        image={desktopImage}
-        alt=''
-      />
-      <GatsbyImage
-        className='hero__image hero__image--tablet'
-        image={desktopImage}
-        alt=''
-      /> */}
       <GatsbyImage className='hero__image' image={desktopImage} alt='' />
       <div className='hero__gradient'></div>
       <div className='hero__copy-section'>

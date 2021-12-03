@@ -24,7 +24,7 @@ export default function footer() {
         <Link to='/home' className='footer__link'>
           HOME
         </Link>
-        <Link to='/stories' className='footer__link'>
+        <Link to='/storypage' className='footer__link'>
           STORIES
         </Link>
         <Link to='/features' className='footer__link'>

@@ -1,39 +1,17 @@
 import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
-import Media from 'react-media';
 import Arrow from '../../assets/shared/desktop/arrow-footer.svg';
 
 export default function story({ story }) {
-  const { author, slug, title, imageDesktop, imageMobile } = story;
+  const { author, slug, title, imageDesktop } = story;
 
   const desktopImage = getImage(imageDesktop);
-  const mobileImage = getImage(imageMobile);
 
   return (
     <div className='stories__item'>
       <div className='stories__relative'>
         <div className='stories__absolute'>
-          {/* <Media
-            queries={{
-              mobile: '(max-width: 768px)',
-              tablet: '(min-width: 769px)',
-            }}>
-            {(matches) => (
-              <>
-                {matches.mobile && (
-                  <GatsbyImage className='stories__image' image={mobileImage} />
-                )}
-                {matches.tablet && (
-                  <GatsbyImage
-                    className='stories__image'
-                    image={desktopImage}
-                    alt=''
-                  />
-                )}
-              </>
-            )}
-          </Media> */}
           <GatsbyImage className='stories__image' image={desktopImage} alt='' />
           <div className='stories__info-section'>
             <h2 className='stories__title'>{title}</h2>

@@ -9,8 +9,7 @@ import Stories from '../components/layout/stories';
 import Layout from '../components/layout.js';
 
 const IndexPage = ({ data }) => {
-  const { heroCopy, heroImageDesktop, heroImageMobile, imageTablet, name } =
-    data.hero.edges[0].node;
+  const { heroCopy, heroImageDesktop, name } = data.hero.edges[0].node;
   const showInviteButton = true;
 
   const article1 = data.articles.edges[0];
@@ -29,8 +28,6 @@ const IndexPage = ({ data }) => {
             <Hero
               props={{
                 heroImageDesktop,
-                heroImageMobile,
-                imageTablet,
                 heroCopy,
                 name,
                 showInviteButton,
@@ -62,12 +59,6 @@ export const query = graphql`
           heroImageDesktop {
             gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO])
           }
-          imageTablet {
-            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
-          }
-          heroImageMobile {
-            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
-          }
         }
       }
     }
@@ -81,12 +72,6 @@ export const query = graphql`
           heroCopy
           heroImageDesktop {
             gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO])
-          }
-          imageTablet {
-            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
-          }
-          heroImageMobile {
-            gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO])
           }
         }
       }
