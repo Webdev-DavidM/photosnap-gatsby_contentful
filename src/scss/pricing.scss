@@ -146,7 +146,7 @@
     padding: 2rem;
 
     &--chosen {
-      @include block-button(80%, $black, $white, $white, $dark-grey);
+      @include block-button(80%, $black, $dark-grey, $white, $dark-grey);
       padding: 2rem;
     }
 
