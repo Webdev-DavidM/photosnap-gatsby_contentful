@@ -18,12 +18,10 @@ export default function story({ story }) {
             <p className='stories__copy'>by {author}</p>
             <div className='stories__rule'></div>
             <Link to={`/${slug}`}>
-              <div className='stories__btn-section stories__btn-section'>
-                <p className='stories__copy stories__copy--no-bottom-margin'>
-                  READ MORE
-                </p>
-                <Arrow />
-              </div>
+              <button className='hero__button hero__button--margin-bottom'>
+                <span className='hero__button_text'>READ MORE</span>
+                <Arrow className='hero__arrow' />
+              </button>
             </Link>
           </div>
           <div className='stories__hidden-gradient'></div>
