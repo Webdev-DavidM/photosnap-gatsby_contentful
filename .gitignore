@@ -5,3 +5,5 @@ todo.md
 starter-code/
 preview.jpg
 README-template.md
+.env.development
+.env.production
