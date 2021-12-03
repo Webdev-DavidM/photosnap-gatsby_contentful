@@ -22,7 +22,7 @@ have used for gatsby are
 
 ## Screenshot
 
-![](/src/static/stories.png)
+![](/stories.png)
 ![](/src/static/stories.png)
 ![](/src/static/stories.png)
 ![](/src/static/stories.png)
