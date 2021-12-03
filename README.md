@@ -23,7 +23,7 @@ have used for gatsby are
 ## Screenshot
 
 ![](/stories.jpg)
-![](/pricing.jpg)
+![](/pricing.jpg), 
 ![](/menu-mobile.jpg)
 
 
@@ -48,6 +48,8 @@ Built with
 - Developed from Sketch design prototypes.
 
 ### Still to do
+
+n/a
 
 # To run locally
 
