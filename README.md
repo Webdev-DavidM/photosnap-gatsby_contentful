@@ -3,7 +3,7 @@
 ## Overview
 
 This project is a simple 4 page website. I have created it to practice using
-gatsby, contentful, graphQl and Sass with BEM methodology. The key features I
+gatsby, contentful, graphQL and Sass with BEM methodology. The key features I
 have used for gatsby are
 
 - Static pages.
