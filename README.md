@@ -23,7 +23,7 @@ have used for gatsby are
 ## Screenshot
 
 ![](/stories.jpg)
-![](/src/static/stories.png)
+![](/src/static/pricing.jpg)
 ![](/src/static/stories.png)
 ![](/src/static/stories.png)
 
