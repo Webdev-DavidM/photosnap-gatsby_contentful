@@ -22,8 +22,8 @@ have used for gatsby are
 
 ## Screenshot
 
-![](/src/static/stories.png)
-![](/src/static/stories.png)
+![](/stories.jpg)
+![](/pricing.jpg)
 ![](/src/static/stories.png)
 ![](/src/static/stories.png)
 
