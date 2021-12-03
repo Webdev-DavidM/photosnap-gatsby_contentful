@@ -18,7 +18,7 @@ have used for gatsby are
 - There are several animations including a moving arrow and gradient.
 - On the pricing page the user can select each plan and also the cost monthly
   and annually.
-- Full responsive, on mobile the menu become a drop down menu with a modal.
+- Full responsive, on mobile the menu become a drop down menu with a modal background behind
 
 ## Screenshot
 
