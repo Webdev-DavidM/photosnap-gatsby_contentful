@@ -24,8 +24,8 @@ have used for gatsby are
 
 ![](/stories.jpg)
 ![](/pricing.jpg)
-![](/src/static/stories.png)
-![](/src/static/stories.png)
+![](/menu-mobile.jpg)
+
 
 ## Live site
 
