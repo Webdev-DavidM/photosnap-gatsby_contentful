@@ -50,4 +50,4 @@ Built with
 In order to run this project locally you would need to create your own
 contentful account, content model and content with them. You can then add your
 own content token and space id to connect the application. See the contentful
-and gatsby docs for more information.
+and gatsby docs for more information. 
