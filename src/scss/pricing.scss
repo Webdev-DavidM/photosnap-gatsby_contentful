@@ -3,6 +3,8 @@
 .pricing {
   background-color: $white;
   min-height: 800px;
+  max-width: 2200px;
+  margin: auto;
 
   &__plans-container {
     @include large-desktop {

@@ -3,6 +3,8 @@
 .index {
   position: relative;
   padding-top: 100px;
+  max-width: 2200px;
+  margin: auto;
 
   &__button {
     @include arrow-button(auto, $white);

@@ -1,6 +1,9 @@
 @import '../App.scss';
 
 .stories {
+  max-width: 2200px;
+  margin: auto;
+
   @include tablet {
     display: flex;
     flex-wrap: wrap;

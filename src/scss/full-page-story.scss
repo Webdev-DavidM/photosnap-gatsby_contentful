@@ -3,6 +3,8 @@
 .full-page-story {
   background-color: $black;
   padding: 1rem 0;
+  max-width: 2200px;
+  margin: auto;
 
   &__go-back-link {
     color: $white;
