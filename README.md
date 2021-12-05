@@ -3,7 +3,7 @@
 ## Overview
 
 This project is a simple 4 page website. I have created it to practice using
-gatsby, contentful, graphQl and Sass with BEM methodology. The key features I
+gatsby, contentful, graphQL and Sass with BEM methodology. The key features I
 have used for gatsby are
 
 - Static pages.
@@ -18,14 +18,14 @@ have used for gatsby are
 - There are several animations including a moving arrow and gradient.
 - On the pricing page the user can select each plan and also the cost monthly
   and annually.
-- Full responsive, on mobile the menu become a drop down menu with a modal background behind
+- Fully responsive, on mobile the menu become a drop down menu with a modal background behind
 
 ## Screenshot
 
 ![](/stories.jpg)
-![](/pricing.jpg)
-![](/src/static/stories.png)
-![](/src/static/stories.png)
+![](/pricing.jpg), 
+![](/menu-mobile.jpg)
+
 
 ## Live site
 
@@ -48,6 +48,8 @@ Built with
 - Developed from Sketch design prototypes.
 
 ### Still to do
+
+n/a
 
 # To run locally
 
