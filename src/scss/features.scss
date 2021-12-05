@@ -1,4 +1,4 @@
-@import '../App.scss';
+@import "../App.scss";
 
 .features {
   background-color: $black;
@@ -16,6 +16,7 @@
   &__image-and-text-container {
     position: relative;
     width: calc(100% - 8px);
+    height: 100%;
   }
 
   &__beta-background {
