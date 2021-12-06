@@ -118,6 +118,7 @@
 
   &__title {
     color: $white;
+    line-height: 32px;
 
     &--headline {
       @include fonts(50px, 50px, -0px, 700);
